@@ -18,7 +18,7 @@ A **School** is an institution for learning, and you are going to create a **Jav
 ## 🧑‍🎓 Class: `Student`
 
 ### Attributes:
-- `id`: `String`
+- `id`: `int`
 - `name`: `String`
 - `email`: `String`
 - `address`: `String`
@@ -28,7 +28,7 @@ A **School** is an institution for learning, and you are going to create a **Jav
 +---------------------+
 |      Student        |
 +---------------------+
-| - id: String        |
+| - id: int           |
 | - name: String      |
 | - email: String     |
 | - address: String   |
@@ -40,7 +40,7 @@ A **School** is an institution for learning, and you are going to create a **Jav
 ## 📘 Class: `Course`
 
 ### Attributes:
-- `id`: `String`
+- `id`: `int`
 - `courseName`: `String`
 - `startDate`: `LocalDate`
 - `weekDuration`: `int`
@@ -55,7 +55,7 @@ A **School** is an institution for learning, and you are going to create a **Jav
 +------------------------------+
 |            Course           |
 +------------------------------+
-| - id: String                |
+| - id: int                   |
 | - courseName: String        |
 | - startDate: LocalDate      |
 | - weekDuration: int         |
