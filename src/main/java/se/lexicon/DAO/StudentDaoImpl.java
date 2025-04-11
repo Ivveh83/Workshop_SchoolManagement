@@ -23,7 +23,7 @@ public class StudentDaoImpl {
 
     public Student findByName(String name) {
         for (Student student : students){
-            if (student.getName().equals(name)) return student;
+            if (student.getName().equalsIgnoreCase(name)) return student;
         }
         return null;
     }

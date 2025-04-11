@@ -13,9 +13,7 @@ class CourseDaoImplTest {
 
     @Test
     void save() {
-        /*course.setId();
-        courses.add(course);
-        return course;*/
+
         Course course = new Course("Syslöjd", LocalDate.now(), 10);
         course.setId();
 
@@ -25,21 +23,38 @@ class CourseDaoImplTest {
         Assertions.assertEquals(course, course1);
     }
 
-    /*public Course findByName(String name) {
-        for (Course course : courses){
-            if (course.getCourseName().equals(name)) return course;
-        }
-        return null;
-    }*/
     @Test
     void findByNameTest() {
         ArrayList<Course> courses = new ArrayList<>();
         Course course = new Course("Syslöjd", LocalDate.now(), 10);
         courses.add(course);
         CourseDaoImpl courseDao = new CourseDaoImpl();
+        courseDao.save(course);
         ArrayList<Course> arrayList = courseDao.findByName("Syslöjd");
 
         Assertions.assertEquals(courses, arrayList);
+    }
+
+    @Test
+    void findByDateTest() {
+        ArrayList<Course> courses = new ArrayList<>();
+        Course course = new Course("Syslöjd", LocalDate.now(), 10);
+        courses.add(course);
+        CourseDaoImpl courseDao = new CourseDaoImpl();
+        courseDao.save(course);
+        ArrayList<Course> arrayList = courseDao.findByDate(LocalDate.now());
+
+        Assertions.assertEquals(courses, arrayList);
+    }
+
+    @Test
+    void findByIdTest() {
+        Course course = new Course("Syslöjd", LocalDate.now(), 10);
+        CourseDaoImpl courseDao = new CourseDaoImpl();
+        courseDao.save(course);
+        Course course1 = courseDao.findById(5);
+
+        Assertions.assertEquals(course, course1);
     }
 
 }

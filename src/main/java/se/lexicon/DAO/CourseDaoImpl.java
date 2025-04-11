@@ -31,7 +31,7 @@ public class CourseDaoImpl {
     public ArrayList<Course> findByName(String name) {
         ArrayList<Course> arrayList = new ArrayList<>();
         for (Course course : courses){
-            if (course.getCourseName().equals(name)) arrayList.add(course);
+            if (course.getCourseName().equalsIgnoreCase(name)) arrayList.add(course);
         }
         return arrayList;
     }
