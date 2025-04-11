@@ -1,7 +1,6 @@
 package se.lexicon;
 
 import se.lexicon.DAO.CourseDaoImpl;
-import se.lexicon.DAO.StudentDAO;
 import se.lexicon.DAO.StudentDaoImpl;
 import se.lexicon.model.Course;
 import se.lexicon.model.Student;

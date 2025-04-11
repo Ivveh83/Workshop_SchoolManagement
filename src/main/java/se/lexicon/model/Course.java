@@ -57,7 +57,7 @@ public class Course {
     }
 
     public void setStudents(ArrayList<Student> students) {
-        this.students = this.students;
+        this.students = students;
     }
 
     public void register(Student student){
