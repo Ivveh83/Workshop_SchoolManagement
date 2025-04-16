@@ -56,4 +56,7 @@ public class Main {
         }
 
     }
+    private void registerCourse(){
+
+    }
 }
